@@ -63,6 +63,7 @@ body {
   	border-radius: 2%;
 	justify-content: space-around;
 	perspective: 1000px;
+	transition: 0.5s;
 }
 
 
@@ -182,6 +183,7 @@ body {
 	margin-top: 1.5em;
 	justify-content: space-around;
 	align-items: center;
+	transition: 0.5s;
 
 }
 

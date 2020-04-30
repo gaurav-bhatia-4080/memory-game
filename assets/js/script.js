@@ -5,7 +5,7 @@ let hasFlipped= false;
 let lock = false;
 let first,second;
 let counter=0;
-let flipAllowed=21;
+let flipAllowed=29;
 
 
 (function shuffle() {
@@ -93,15 +93,15 @@ function flipLeft()
 		  	{
 		  		count.innerHTML="Flips Left: " + flipAllowed;
 		  	}
-		  	else
+		  	else if (flipAllowed>0 && counter==6)
 		  	{
-		  		lock=true;
+		  		youWon();
+			}
+			else
+			{
+				youLost();
+			}
 
-		  		count.innerHTML="Sorry, You Lost!";
-		  		resetBoardButton();
-
-		  		
-		  	}
 
 		  	count.style.opacity = 1; //fade back in
 
@@ -117,8 +117,7 @@ function resetBoardButton()
 		  setTimeout(function() {
 		  	document.getElementById("rb").style.display = "flex";
 			document.getElementById("board").style.display = "none";
-			document.getElementById("heading").innerHTML= "Aww Snap!!"
-		  	count.style.opacity = 1; //fade back in
+			count.style.opacity = 1; //fade back in
 
 		  }, 500); //this timeout needs to be the same as the transition speed
 	}) 
@@ -128,3 +127,17 @@ function resetBoardButton()
 resetUni.onclick = function() {
     window.location = window.location;
   };
+
+function youWon()
+{
+	count.innerHTML="You Won!";
+	document.getElementById("heading").innerHTML= "Yay!!"
+	resetBoardButton();
+}
+function youLost()
+{
+	lock=true;
+	count.innerHTML="Aww, Snap!!";
+	document.getElementById("heading").innerHTML= "Memory Test Failed"
+	resetBoardButton();
+}
