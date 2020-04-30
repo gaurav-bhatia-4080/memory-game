@@ -5,7 +5,7 @@ let hasFlipped= false;
 let lock = false;
 let first,second;
 let counter=0;
-let flipAllowed=29;
+let flipAllowed=21;
 
 
 (function shuffle() {
