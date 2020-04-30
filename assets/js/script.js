@@ -1,10 +1,12 @@
 const cards = document.querySelectorAll('.tile');
 const count = document.getElementById('count');
-console.log(count);
+const resetUni = document.getElementById('reset');
 let hasFlipped= false;
 let lock = false;
 let first,second;
 let counter=0;
+let flipAllowed=21;
+
 
 (function shuffle() {
   cards.forEach(card => {
@@ -27,12 +29,16 @@ function flipCard()
 	{
 		hasFlipped = true;
 		first = this;
+		flipAllowed-=1;
+		flipLeft();
 	}
 	//second click
 	else
 	{
 		// hasFlipped = false;
 		second = this;
+		flipAllowed-=1;
+		flipLeft();
 		checkMatch();
 	}
 }
@@ -45,7 +51,6 @@ function checkMatch()
 	{
 		disableCards();
 		counter=counter+1;
-		changeScore();	
 
 	}
 	else
@@ -77,20 +82,25 @@ function resetB()
 }
 cards.forEach(card => card.addEventListener("click", flipCard) )
 
-function changeScore()
+function flipLeft()
 {
 	count.style.transition = "0.5s"; //fade speed
 
 	setTimeout(function () {
 		  count.style.opacity = 0; //make text temporarily invisible
 		  setTimeout(function() {
-		  	if (counter<6)
+		  	if (flipAllowed>0 && counter<6)
 		  	{
-		  		count.innerHTML="Score = " + counter;		    	
+		  		count.innerHTML="Flips Left: " + flipAllowed;
 		  	}
 		  	else
 		  	{
-		  		count.innerHTML="You Win!!";
+		  		lock=true;
+
+		  		count.innerHTML="Sorry, You Lost!";
+		  		resetBoardButton();
+
+		  		
 		  	}
 
 		  	count.style.opacity = 1; //fade back in
@@ -99,3 +109,22 @@ function changeScore()
 	})
 }
 
+
+function resetBoardButton()
+{
+	setTimeout(function () {
+		  count.style.opacity = 0; //make text temporarily invisible
+		  setTimeout(function() {
+		  	document.getElementById("rb").style.display = "flex";
+			document.getElementById("board").style.display = "none";
+			document.getElementById("heading").innerHTML= "Aww Snap!!"
+		  	count.style.opacity = 1; //fade back in
+
+		  }, 500); //this timeout needs to be the same as the transition speed
+	}) 
+
+}
+
+resetUni.onclick = function() {
+    window.location = window.location;
+  };

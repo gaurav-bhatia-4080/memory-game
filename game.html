@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory Test</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css"></link> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+	<script>
+		var bleep = new Audio();
+		bleep.src = "assets/sounds/zapsplat_multimedia_click_001_19367.mp3"
+	</script>
+</head>
+<body>
+	<section class="memory-test">
+		<h1 class="heading" id="heading">Memory Test!!</h1>
+		<h1  id="count" class="heading">Flips Left : 21</h1>
+		<div id="rb">
+			<button id="reset" class="btn btn-six" >Reset Game?</button>
+		</div>
+		<div id="board">
+		    <div class="tile" data-val="1">
+		      <img class="front" src="assets/Images/1.jpg" alt="1" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" />
+		    </div>
+		    <div class="tile" data-val="1">
+		      <img class="front" src="assets/Images/1.jpg" alt="1" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+			</div>
+			
+
+		    <div class="tile" data-val="2">
+		      <img class="front" src="assets/Images/2.jpg" alt="2" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+		    <div class="tile" data-val="2">
+		      <img class="front" src="assets/Images/2.jpg" alt="2" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover"onmousedown="bleep.play()" />
+		    </div>
+
+		    <div class="tile" data-val="3">
+		      <img class="front" src="assets/Images/3.jpg" alt="3" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+		    <div class="tile" data-val="3">
+		      <img class="front" src="assets/Images/3.jpg" alt="3" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+
+		    <div class="tile" data-val="4">
+		      <img class="front" src="assets/Images/4.jpg" alt="4" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+		    <div class="tile" data-val="4">
+		      <img class="front" src="assets/Images/4.jpg" alt="4" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+
+		    <div class="tile" data-val="5">
+		      <img class="front" src="assets/Images/5.jpg" alt="5" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+		    <div class="tile" data-val="5">
+		      <img class="front" src="assets/Images/5.jpg" alt="5" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+
+		    <div class="tile" data-val="6">
+		      <img class="front" src="assets/Images/6.jpg" alt="6" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+		    <div class="tile" data-val="6">
+		      <img class="front" src="assets/Images/6.jpg" alt="6" onmousedown="bleep.play()"/>
+		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
+		    </div>
+			
+		</div>
+
+	</section>
+</body>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</html>

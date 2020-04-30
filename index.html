@@ -1,73 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Memory Test</title>
+	<title>Instructions</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css"></link> 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<meta name="viewport" content="Width=device-width, initial-scale=1">
-	<script>
-		var bleep = new Audio();
-		bleep.src = "assets/sounds/zapsplat_multimedia_click_001_19367.mp3"
-	</script>
+
 </head>
 <body>
-	<section class="memory-test">
-		<h1 class="heading">Memory Test!!</h1>
-		<h1  id="count" class="heading">Score = 0</h1>
-		<div class='board'>
-		    <div class="tile" data-val="1">
-		      <img class="front" src="assets/Images/1.jpg" alt="1" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" />
-		    </div>
-		    <div class="tile" data-val="1">
-		      <img class="front" src="assets/Images/1.jpg" alt="1" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-
-		    <div class="tile" data-val="2">
-		      <img class="front" src="assets/Images/2.jpg" alt="2" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-		    <div class="tile" data-val="2">
-		      <img class="front" src="assets/Images/2.jpg" alt="2" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover"onmousedown="bleep.play()" />
-		    </div>
-
-		    <div class="tile" data-val="3">
-		      <img class="front" src="assets/Images/3.jpg" alt="3" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-		    <div class="tile" data-val="3">
-		      <img class="front" src="assets/Images/3.jpg" alt="3" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-
-		    <div class="tile" data-val="4">
-		      <img class="front" src="assets/Images/4.jpg" alt="4" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-		    <div class="tile" data-val="4">
-		      <img class="front" src="assets/Images/4.jpg" alt="4" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-
-		    <div class="tile" data-val="5">
-		      <img class="front" src="assets/Images/5.jpg" alt="5" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-		    <div class="tile" data-val="5">
-		      <img class="front" src="assets/Images/5.jpg" alt="5" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-
-		    <div class="tile" data-val="6">
-		      <img class="front" src="assets/Images/6.jpg" alt="6" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-		    </div>
-		    <div class="tile" data-val="6">
-		      <img class="front" src="assets/Images/6.jpg" alt="6" onmousedown="bleep.play()"/>
-		      <img class="back" src="assets/Images/Cover.jpg" alt="Cover" onmousedown="bleep.play()"/>
-			
+	<section id="ia">
+		<div class="about">
+			<h1 class="heading">About</h1>
+			<p>This is a game to test the limits of your memory. You'll be given 6 pairs of distinct cards, randomly arranged on a board. Your job is to find the pair of cards with similar image on them.</p>
+		</div>
+		<div class="instructions">
+			<h1 class="heading">Instructions</h1>
+			<ul>
+				<li>
+					Intially all the cards will be covered.
+				</li>
+				<li>
+					You can click on the card to flip them over to reveal the image.
+				</li>
+				<li>
+					You will only be allowed to flip two cards at a time.
+				</li>
+				<li>
+					If the two cards flipped over have the same image, the pair is found.
+				</li>
+				<li>
+					You are only allowed a limited number of flips.
+				</li>
+			</ul>		
+		</div>
+		<div class="begin">
+			<button id="start" class="btn btn-six" onclick="window.open('game.html','_self')">Lets Begin</button>			
 		</div>
 	</section>
 </body>
