@@ -28,6 +28,7 @@ html
     background-attachment: fixed;
 	font-family: 'Montserrat', sans-serif;
 	overflow: scroll;
+	max-width: 100%;
 }
 
 body {
@@ -119,8 +120,8 @@ body {
 @media screen and (max-width: 1066px)
 {
 	#board {
-		width: 640px;
-	  	height: 1040px;
+		width: 330px;
+	  	height: 540px;
 	  	display: flex;
 	  	flex-wrap: wrap;
 	  	/*background-color: #242e63;*/
@@ -131,9 +132,9 @@ body {
 
 
 	.tile{
-		width: calc(33.333% - 30px);
-	  	height: calc(25% - 30px);
-	  	margin: 15px;
+		width: calc(33.333% - 10px);
+		height: calc(25% - 10px);
+		margin: 5px;
 	  	/*background-color: #879aff;*/
 		position: relative;
 		display: flex;
